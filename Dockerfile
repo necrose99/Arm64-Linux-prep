@@ -8,9 +8,9 @@ ADD https://raw.githubusercontent.com/mickael-guene/proot-static-build/master-um
 ADD https://github.com/mickael-guene/umeq/releases/download/1.7.4/umeq-arm64  umeq
 #
 VOLUME /var/lib/layman:rw, /usr/portage:rw", /usr/portage/distfiles:rw, /packages:rw, /:rw
+chmod +x {/proot-start.sh, /umeq, /proot}
 
-
-RUN rmdir /usr/portage/packages && ln -s /packages /usr/portage/packages 
+RUN mkdir /usr/portage && rmdir /usr/portage/packages && ln -s /packages /usr/portage/packages 
 # less digging latter if pushing packages out of docker to Binhost. 
 #make easy 4 laterz with lazy sym-links.
 RUN ln -s /proot-start.sh /proot-start 
