@@ -27,3 +27,4 @@ EOF
 
 # Setup the rc_sys
 sed -e 's/#rc_sys=""/rc_sys="lxc"/g' -i /etc/rc.conf
+}
