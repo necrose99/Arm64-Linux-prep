@@ -1,6 +1,6 @@
 FROM busybox
 MAINTAINER Necrose99
-ENV ARCH=arm64
+#ENV ARCH=arm64
 #Umeq is an equivalent of Qemu user mode. 
 #It allows you to run foreign architecture binaries on your host system. 
 #For example you can run arm64 binaries on x86_64 linux desktop.
