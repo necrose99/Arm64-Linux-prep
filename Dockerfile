@@ -12,7 +12,6 @@ RUN chmod +x {/proot-start.sh, /umeq, /proot}
 #
 VOLUME /var/lib/layman:rw, /usr/portage:rw", /usr/portage/distfiles:rw, /packages:rw, /:rw
 
-
 RUN mkdir /usr/portage && rmdir /usr/portage/packages && ln -s /packages /usr/portage/packages 
 # less digging latter if pushing packages out of docker to Binhost. 
 #make easy 4 laterz with lazy sym-links.
